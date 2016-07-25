@@ -1,4 +1,4 @@
-<br>Ö±½ÓÀý×Ó°É¡£
+<br>Example
 
 struct MyTest
 {
