@@ -9,14 +9,14 @@ struct MyTest
 	std::list<std::vector<int>> c;
 	std::map<std::string, std::vector<int>> m;
 	std::map<string, std::map<std::string, std::vector<int>> > s;
-
+	
 	void toString(string& str) const
 	{
 		StlPack p;
 		p << i << j << k << bval << txt << v << c << m << s;
 		str = p.buffer();
 	}
-
+	
 	void unString(const string& str)
 	{
 		StlUnpack up(str);
