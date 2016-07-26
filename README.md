@@ -1,4 +1,4 @@
-<br>Example
+<br>Example,you can find out the demo at the bottom of the stlpack.h's file.
 <br>
 <br>struct MyTest
 <br>{
