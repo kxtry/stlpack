@@ -5,10 +5,10 @@
 <br>	int i, j, k;
 <br>	bool bval;
 <br>	std::string txt;
-<br>	std::vector<short> v;
-<br>	std::list<std::vector<int>> c;
-<br>	std::map<std::string, std::vector<int>> m;
-<br>	std::map<string, std::map<std::string, std::vector<int>> > s;
+<br>	std::vector&lt;short&gt; v;
+<br>	std::list&lt;std::vector&lt;int&gt;&gt; c;
+<br>	std::map&lt;std::string, std::vector&lt;int&gt;&gt; m;
+<br>	std::map&lt;string, std::map&lt;std::string, std::vector&lt;int&gt;&gt; &gt; s;
 <br>	
 <br>	void toString(string& str) const
 <br>	{
@@ -24,7 +24,7 @@
 <br>	}
 <br>};
 <br>
-<br>template<typename T>
+<br>template&lt;typename T&gt;
 <br>int Test()
 <br>{
 <br>	MyTest t1, t2;
@@ -36,16 +36,16 @@
 <br>	t1.v.push_back(5);
 <br>	t1.v.push_back(6);
 <br>	t1.v.push_back(7);
-<br>	std::vector<int> ca1, ca2;
+<br>	std::vector&lt;int&gt; ca1, ca2;
 <br>	ca1.push_back(8);
 <br>	ca1.push_back(9);
 <br>	ca2.push_back(10);
 <br>	ca2.push_back(11);
 <br>	t1.c.push_back(ca1);
 <br>	t1.c.push_back(ca2);
-<br>	t1.m.insert(std::map<std::string,std::vector<int>>::value_type("xyz", ca1));
-<br>	t1.m.insert(std::map<std::string,std::vector<int>>::value_type("ijk", ca2));
-<br>	t1.s.insert(std::map<std::string,std::map<std::string, std::vector<int>>>::value_type("opq", t1.m));
+<br>	t1.m.insert(std::map&lt;std::string,std::vector&lt;int&gt;&gt;::value_type("xyz", ca1));
+<br>	t1.m.insert(std::map&lt;std::string,std::vector&lt;int&gt;&gt;::value_type("ijk", ca2));
+<br>	t1.s.insert(std::map&lt;std::string,std::map&lt;std::string, std::vector&lt;int&gt;&gt;&gt;::value_type("opq", t1.m));
 <br>	string txt;
 <br>	t1.toString(txt);
 <br>
